@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/ch_potato_main_unselect"/>
+    <item
+        android:drawable="@drawable/ch_charactor_potato_m_main"/>
+
+</selector>

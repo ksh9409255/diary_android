@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/register_slide"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    app:umanoDragView="@+id/register_drag"
+    app:umanoScrollableView="@+id/register_character_rc"
+    app:umanoPanelHeight="0dp"
+    tools:context=".register.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/register_character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_register_character"
+                app:layout_constraintBottom_toTopOf="@+id/register_box"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/register_box"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/register_select_character"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_character">
+
+                <TextView
+                    android:id="@+id/register_nick_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="농부의 이름을 작성해주세요"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/base_font"
+                    app:layout_constraintBottom_toTopOf="@+id/register_nickname"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/register_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_register_input_nick"
+                    android:hint="농부 이름 작성"
+                    android:padding="5dp"
+                    android:textColorHint="#676767"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/base_font"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textColor="#676767"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/register_valid"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_nick_text" />
+
+                <Button
+                    android:id="@+id/register_valid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mypage_signout_btn"
+                    android:text="중복확인"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/base_font"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/register_nickname"
+                    app:layout_constraintTop_toBottomOf="@+id/register_nick_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/register_select_character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_register_input_nick"
+                android:text="농부를 선택하세요"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:fontFamily="@font/base_font"
+                app:layout_constraintBottom_toTopOf="@+id/register_done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_box" />
+
+            <Button
+                android:id="@+id/register_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_register_input_nick"
+                android:text="시작하기"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:fontFamily="@font/base_font"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_select_character" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/register_drag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/register_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/close_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintVertical_bias="0.02"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/register_character_rc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/register_btn_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="선택"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/base_font"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_character_rc"
+            app:layout_constraintWidth_percent="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

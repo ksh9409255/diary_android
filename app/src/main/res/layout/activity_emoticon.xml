@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".emoticon.EmoticonActivity">
+
+    <ImageButton
+        android:id="@+id/emoticon_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frined_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/emoticon_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/base_font"
+        android:text="XXXXXXXXXX"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <ImageButton
+        android:id="@+id/fragment_btn_potato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_btn_potato"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_container"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_btn_abocado"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_btn_mandarin"
+        app:layout_constraintTop_toBottomOf="@+id/emoticon_nickname" />
+
+    <ImageButton
+        android:id="@+id/fragment_btn_swpotato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_btn_swpotato"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_btn_potato"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_btn_mandarin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/fragment_btn_abocado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_btn_abocado"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_btn_potato"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_btn_apple"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_btn_potato" />
+
+    <ImageButton
+        android:id="@+id/fragment_btn_apple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_btn_apple"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_btn_potato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_btn_abocado" />
+
+    <ImageButton
+        android:id="@+id/fragment_btn_mandarin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_btn_mandarin"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_btn_potato"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_btn_potato"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_btn_swpotato" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4DE0CA7A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emoticon_nickname"
+        app:layout_constraintWidth_percent="0.9">
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

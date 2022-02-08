@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mypage.ProfileActivity"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    app:umanoDragView="@+id/profile_slide"
+    app:umanoScrollableView="@+id/profile_character_rc"
+    app:umanoPanelHeight="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <ImageButton
+            android:id="@+id/profile_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frined_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintVertical_bias="0.02"/>
+
+        <ImageView
+            android:id="@+id/profile_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sample_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/profile_character_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mypage_character_text_p"
+            android:gravity="center_horizontal"
+            android:text="고구마농부"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/base_font"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_character" />
+
+        <TextView
+            android:id="@+id/profile_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/base_font"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_character_text"
+            android:padding="10dp"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_nickname"
+            app:layout_constraintWidth_percent="0.9">
+
+            <TextView
+                android:id="@+id/edit_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/base_font"
+                android:padding="10dp"
+                android:text="농부이름"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/profile_edit_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mypage_edit_btn"
+                android:fontFamily="@font/base_font"
+                android:gravity="center"
+                android:hint="변경할 이름을 작성하세요"
+                android:textColor="#676767"
+                android:textColorHint="#676767"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/profile_valid"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_nickname" />
+
+            <Button
+                android:id="@+id/profile_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mypage_signout_btn"
+                android:fontFamily="@font/base_font"
+                android:text="중복확인"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_edit_nickname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/profile_edit_nickname"
+                app:layout_constraintTop_toTopOf="@+id/profile_edit_nickname" />
+
+            <TextView
+                android:id="@+id/edit_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/base_font"
+                android:padding="10dp"
+                android:text="대표 재배 작물"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_edit_nickname" />
+
+            <Button
+                android:id="@+id/profile_btn_character"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mypage_edit_btn"
+                android:fontFamily="@font/base_font"
+                android:text="고구마"
+                android:textColor="#676767"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_category" />
+
+            <Button
+                android:id="@+id/profile_btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mode_mypage_btn"
+                android:fontFamily="@font/base_font"
+                android:text="변경사항 적용하기"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_btn_character" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/profile_slide">
+
+        <ImageButton
+            android:id="@+id/profile_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/close_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintVertical_bias="0.02"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profile_character_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_close_btn" />
+
+        <Button
+            android:id="@+id/profile_btn_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="선택"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#4DE0CA7A"
+            android:textColor="#676767"
+            android:fontFamily="@font/base_font"
+            app:layout_constraintVertical_bias="0.95"
+            app:layout_constraintWidth_percent="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

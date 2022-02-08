@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="299dp"
+    android:layout_height="171dp">
+
+    <TextView
+        android:id="@+id/dialog_friend_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제할 친구 닉네임을 입력하세요"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:fontFamily="@font/base_font"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_friend_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dialog_friend_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mypage_edit_btn"
+        android:fontFamily="@font/base_font"
+        android:textCursorDrawable="@drawable/text_cursor"
+        android:textColor="#676767"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_friend_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_friend_text" />
+
+    <Button
+        android:id="@+id/dialog_friend_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제하기"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:fontFamily="@font/base_font"
+        android:background="@drawable/mypage_signout_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_friend_edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

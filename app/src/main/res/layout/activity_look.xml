@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diary.LookActivity">
+
+    <ImageButton
+        android:id="@+id/look_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frined_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintVertical_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TextView
+            android:id="@+id/look_diary_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXXXXX"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumson_flower"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/look_emoticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/look_emoticon_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/look_diary_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TextView
+            android:id="@+id/look_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X월X일"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumson_flower"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/look_diary_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+            android:background="#4DE0CA7A"
+            android:padding="20dp"
+            android:fontFamily="@font/nanumson_flower"
+            android:text="천방지축 얼렁뚱땅 빙글빙글 돌아가는 짱덩의 하루~ 블라블라 재미있었다. 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블라블라 블라블라블sfadjkhfsadkjhfdsakjhfsadkjfdshkfjsdahsafdkjhfdsalkjasdfhkfasdjhalksfdjhasdflkjhakasldfhlafskdhfsadlkhfsdalkjhasdflkjfshlksafdhfsaldkhfsdalksdfhalksdfahsfadlkhsdfalksdfhalskdfahaslkdfjhfsadlkhdfslkhsdflksdfajlksfdahsdallasdfhlakfdshfdsalkhdsfalkjdshfggddgdgggggsgsdgjlskdfahfsdalkjhdsfalkjhfsdakjfdshkjdsfahfdsakjhfdskajlhafsdlkdfhsaalskfdhsafdlkhdsaflkhdsfalksdfahlksdfahdsflakhsdaflkdfshalkfdsahldkfsahdsflakhsdfalkhdsfalkdsfhalkdsfahdfsalkhdfsalk라블라"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/look_date_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

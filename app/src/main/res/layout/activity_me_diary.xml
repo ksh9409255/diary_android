@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diaryMe.MeDiaryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/diary_waiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/diary_waiting_gif"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gif_waiting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/diary_waiting_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/base_font"
+            android:paddingBottom="10dp"
+            android:text="잠시만 기다려주세요!"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/diary_waiting_gif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/diary_waiting_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/base_font"
+            android:paddingTop="10dp"
+            android:text="일기를 불러오고 있습니다!"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diary_waiting_gif" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/diary_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frined_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintVertical_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/diary_character_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diary_character_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/diary_nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/base_font"
+        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_character_img" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/calendar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_nickName"
+        app:layout_constraintVertical_weight="1"
+        app:mcv_selectionColor="#00ffffff"
+        app:mcv_headerTextAppearance="@style/CalendarWidgetHeader"
+        app:mcv_weekDayTextAppearance="@style/CalendarWidgetWeek"
+        app:mcv_showOtherDates="none" />
+
+    <!-- figma에서 이미지를 가져다 쓸 경우 png대신 svg를 사용하자 -->
+
+    <ImageButton
+        android:id="@+id/diary_btn_emoticon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/emoticon_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

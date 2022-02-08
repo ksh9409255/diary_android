@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/write_main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diaryMe.writeActivity"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    app:umanoDragView="@id/write_slide"
+    app:umanoScrollableView="@id/write_emoticon_rc"
+    app:umanoPanelHeight="0dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:id="@+id/wirte_main">
+
+            <ImageButton
+                android:id="@+id/look_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/frined_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintVertical_bias="0.02"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintVertical_bias="0.1">
+
+                <EditText
+                    android:id="@+id/look_diary_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/write_title_edit"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textColor="#676767"
+                    android:hint="제목"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumson_flower"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:maxLength="13"/>
+
+                <ImageButton
+                    android:id="@+id/look_emoticon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dialog_emoticon_nothing"
+                    android:background="#00000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/look_diary_box"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintVertical_bias="0.1">
+
+                <TextView
+                    android:id="@+id/look_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xxxx년 X월 X일"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:padding="10dp"
+                    android:fontFamily="@font/nanumson_flower"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/look_diary_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#4DE0CA7A"
+                    android:gravity="top"
+                    android:padding="20dp"
+                    android:textColor="#676767"
+                    android:hint="글을 작성해주세요"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumson_flower"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/look_date_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/me_look_btn_write"
+                android:layout_width="62dp"
+                android:layout_height="27dp"
+                android:background="@drawable/write_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/look_diary_box"
+                app:layout_constraintHorizontal_bias="0.9"/>
+
+            <CheckBox
+                android:id="@+id/write_chb_public"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비공개"
+                android:fontFamily="@font/base_font"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/me_look_btn_write"
+                app:layout_constraintTop_toBottomOf="@+id/look_diary_box" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/write_slide">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/write_emoticon_rc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/write_btn_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="선택"
+            android:textColor="#000000"
+            android:fontFamily="@font/base_font"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/write_emoticon_rc"
+            app:layout_constraintWidth_percent="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
